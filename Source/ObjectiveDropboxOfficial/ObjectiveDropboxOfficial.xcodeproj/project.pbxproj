@@ -1943,7 +1943,7 @@
 		F2D40D3B1E7782C7004CCEB7 /* DBGlobalErrorResponseHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D40D381E7782C7004CCEB7 /* DBGlobalErrorResponseHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2D40D3C1E7782C7004CCEB7 /* DBGlobalErrorResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D40D391E7782C7004CCEB7 /* DBGlobalErrorResponseHandler.m */; };
 		F2D40D3D1E7782C7004CCEB7 /* DBGlobalErrorResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D40D391E7782C7004CCEB7 /* DBGlobalErrorResponseHandler.m */; };
-		F2F2CFFD1E9D769500512DE8 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F2CFFC1E9D769500512DE8 /* SafariServices.framework */; };
+		F2F2CFFD1E9D769500512DE8 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F2CFFC1E9D769500512DE8 /* SafariServices.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F2F2CFFF1E9D76C300512DE8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F2CFFE1E9D76C300512DE8 /* SystemConfiguration.framework */; };
 		F2F2D0011E9D76CA00512DE8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F2D0001E9D76CA00512DE8 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
@@ -6534,7 +6534,7 @@
 				GCC_WARN_SHADOW = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Platform/ObjectiveDropboxOfficial_iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dropbox.ObjectiveDropboxOfficial;
 				PRODUCT_NAME = ObjectiveDropboxOfficial;
@@ -6561,8 +6561,12 @@
 				GCC_WARN_SHADOW = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Platform/ObjectiveDropboxOfficial_iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-DNS_BLOCK_ASSERTIONS=1",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dropbox.ObjectiveDropboxOfficial;
 				PRODUCT_NAME = ObjectiveDropboxOfficial;
 				SKIP_INSTALL = YES;
